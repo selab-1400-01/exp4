@@ -13,6 +13,7 @@ public class PrototypeTests {
         CedarTree copyCedarTree = (CedarTree) cedarTree.copy();
         Assert.assertEquals(cedarTree.getMass(), copyCedarTree.getMass());
         Assert.assertEquals(cedarTree.getSize(), copyCedarTree.getSize());
+        Assert.assertEquals(cedarTree.getLayerCount(), copyCedarTree.getLayerCount());
     }
 
     @Test
