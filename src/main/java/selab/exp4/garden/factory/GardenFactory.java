@@ -4,16 +4,10 @@ import selab.exp4.garden.plant.bush.Bush;
 import selab.exp4.garden.plant.tree.decorative.DecorativeTree;
 import selab.exp4.garden.plant.tree.fruit.FruitTree;
 
-public class GardenFactory {
-    public DecorativeTree createDecorativeTree() {
-        return null;
-    }
+public abstract class GardenFactory {
+    public abstract DecorativeTree createDecorativeTree();
 
-    public FruitTree createFruitTree() {
-        return null;
-    }
+    public abstract FruitTree createFruitTree();
 
-    public Bush createBush() {
-        return null;
-    }
+    public abstract Bush createBush();
 }
