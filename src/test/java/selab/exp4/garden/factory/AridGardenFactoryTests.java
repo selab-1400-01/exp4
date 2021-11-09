@@ -1,11 +1,14 @@
 package selab.exp4.garden.factory;
 
 import org.junit.Test;
+import selab.exp4.garden.plant.bush.Bush;
+import selab.exp4.garden.plant.tree.decorative.DecorativeTree;
+import selab.exp4.garden.plant.tree.fruit.FruitTree;
 
 import static org.junit.Assert.assertTrue;
 
 public class AridGardenFactoryTests {
-    private GardenFactory factory = new AridGardenFactory();
+    private final GardenFactory factory = new AridGardenFactory();
 
     @Test
     public void createDecorativeTree_ReturnsResistantDecorativeTree() {
@@ -23,8 +26,8 @@ public class AridGardenFactoryTests {
 
     @Test
     public void createBush_ReturnsResistantBush() {
-        Bush tree = this.factory.createBush();
+        Bush bush = this.factory.createBush();
 
-        assertTrue(tree.isAppropriateForAridCondition());
+        assertTrue(bush.isAppropriateForAridCondition());
     }
 }
