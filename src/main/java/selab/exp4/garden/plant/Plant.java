@@ -16,7 +16,7 @@ public abstract class Plant {
 
     public boolean isAppropriateForRainyCondition() {
         int rate = getWaterRate();
-        return rate <= RAINY_WATER_RATE_THRESHOLD;
+        return rate >= RAINY_WATER_RATE_THRESHOLD;
     }
 
     private int getWaterRate() {
