@@ -10,7 +10,7 @@ public class PrototypeTests {
     @Test
     public void givenCedarTreePrototype_ReturnsClone() {
         CedarTree cedarTree = new CedarTree();
-        copyCedarTree = cedarTree.copy();
+        CedarTree copyCedarTree = (CedarTree) cedarTree.copy();
         Assert.assertEquals(cedarTree.getMass(), copyCedarTree.getMass());
         Assert.assertEquals(cedarTree.getSize(), copyCedarTree.getSize());
     }
@@ -18,7 +18,7 @@ public class PrototypeTests {
     @Test
     public void givenPistachioTreePrototype_ReturnsClone() {
         PistachioTree pistachioTree = new PistachioTree();
-        copyPistachioTree = pistachioTree.copy();
+        PistachioTree copyPistachioTree = (PistachioTree) pistachioTree.copy();
         Assert.assertEquals(pistachioTree.getFruitsCount(), copyPistachioTree.getFruitsCount());
         Assert.assertEquals(pistachioTree.getSize(), copyPistachioTree.getSize());
         Assert.assertEquals(pistachioTree.getWaterConsumption(), copyPistachioTree.getWaterConsumption());
