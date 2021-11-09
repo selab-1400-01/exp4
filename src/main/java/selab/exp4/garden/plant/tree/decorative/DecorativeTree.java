@@ -5,10 +5,6 @@ import selab.exp4.garden.plant.tree.Tree;
 public abstract class DecorativeTree extends Tree {
     private int mass;
 
-    protected DecorativeTree(int mass) {
-        this.mass = mass;
-    }
-
     public int getMass() {
         return mass;
     }

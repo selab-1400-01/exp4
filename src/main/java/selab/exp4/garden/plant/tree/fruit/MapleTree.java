@@ -5,7 +5,11 @@ import selab.exp4.garden.plant.tree.Tree;
 public class MapleTree extends FruitTree {
 
     public MapleTree() {
-        super(200);
+        this.setFruitsCount(500);
+    }
+
+    public MapleTree(MapleTree source) {
+        this.setFruitsCount(source.getFruitsCount());
     }
 
     @Override
@@ -15,8 +19,6 @@ public class MapleTree extends FruitTree {
 
     @Override
     public Tree copy() {
-        MapleTree mapleTree = new MapleTree();
-        mapleTree.setFruitsCount(this.getFruitsCount());
-        return mapleTree;
+        return new MapleTree(this);
     }
 }

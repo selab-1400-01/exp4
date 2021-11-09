@@ -5,7 +5,11 @@ import selab.exp4.garden.plant.tree.Tree;
 public class CedarTree extends DecorativeTree {
 
     public CedarTree() {
-        super(200);
+        this.setMass(200);
+    }
+
+    public CedarTree(CedarTree source) {
+        this.setMass(source.getMass());
     }
 
     @Override
@@ -16,8 +20,6 @@ public class CedarTree extends DecorativeTree {
 
     @Override
     public Tree copy() {
-        CedarTree cedarTree = new CedarTree();
-        cedarTree.setMass(this.getMass());
-        return cedarTree;
+        return new CedarTree(this);
     }
 }

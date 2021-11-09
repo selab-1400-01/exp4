@@ -5,7 +5,11 @@ import selab.exp4.garden.plant.tree.Tree;
 public class PistachioTree extends FruitTree {
 
     public PistachioTree() {
-        super(500);
+        this.setFruitsCount(350);
+    }
+
+    public PistachioTree(PistachioTree source) {
+        this.setFruitsCount(source.getFruitsCount());
     }
 
     @Override
@@ -15,8 +19,6 @@ public class PistachioTree extends FruitTree {
 
     @Override
     public Tree copy() {
-        PistachioTree pistachioTree = new PistachioTree();
-        pistachioTree.setFruitsCount(this.getFruitsCount());
-        return pistachioTree;
+        return new PistachioTree(this);
     }
 }
